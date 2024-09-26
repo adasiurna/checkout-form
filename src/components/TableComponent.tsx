@@ -8,7 +8,7 @@ interface TableComponentProps {
 
 const TableComponent: React.FC<TableComponentProps> = ({ productName, price }) => {
   return (
-    <Table>
+    <Table className="bg-light-grey">
       <tbody>
         <tr>
           <td><img src="https://via.placeholder.com/50" alt="Product" /> {productName}</td>

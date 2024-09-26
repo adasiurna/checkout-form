@@ -12,7 +12,7 @@ interface SelectFieldProps {
 
 const SelectField: React.FC<SelectFieldProps> = ({ label, name, options, disabled, onChange }) => {
   return (
-    <FormGroup>
+    <FormGroup className="select-wrap">
       <Label for={name}>{label}</Label>
       <Field name={name} as="select" id={name} disabled={disabled} onChange={onChange}>
         <option value="">Select {label}</option>

@@ -56,10 +56,10 @@ const App: React.FC = () => {
   };
 
   return (
-    <>
+    <div style={{ minHeight: '100vh', position: 'relative' }}>
       <Header />
-      <Container>
-        <Row >
+      <Container className="vh-100">
+        <Row className="min-vh-100">
           <Col md="7" className="border-end border-right pt-4" >
             <h2>Contact</h2>
             <Formik
@@ -125,12 +125,12 @@ const App: React.FC = () => {
               )}
             </Formik>
           </Col>
-          <Col md="5">
+          <Col md="5" className="pt-4 bg-light-grey right-bg">
             <TableComponent productName="Product Name" price="$229.97" />
           </Col>
         </Row>
       </Container>
-    </>
+    </div>
   );
 };
 
