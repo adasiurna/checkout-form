@@ -14,7 +14,7 @@ const SelectField: React.FC<SelectFieldProps> = ({ label, name, options, disable
   return (
     <FormGroup className="select-wrap">
       <Label for={name}>{label}</Label>
-      <Field name={name} as="select" id={name} disabled={disabled} onChange={onChange}>
+      <Field className="form-control" name={name} as="select" id={name} disabled={disabled} onChange={onChange}>
         <option value="">Select {label}</option>
         {options.map((option, index) => (
           <option key={index} value={option}>

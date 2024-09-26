@@ -61,7 +61,7 @@ const App: React.FC = () => {
       <Container className="vh-100">
         <Row className="min-vh-100">
           <Col md="7" className="border-end border-right pt-4" >
-            <h2>Contact</h2>
+            <h4>Contact</h4>
             <Formik
               initialValues={initialValues}
               validationSchema={validationSchema}
@@ -70,7 +70,7 @@ const App: React.FC = () => {
               {({ values, setFieldValue }) => (
                 <FormikForm>
                   <InputField label="Email Address" name="email" type="email" />
-                  <h2>Delivery</h2>
+                  <h4>Delivery</h4>
                   <Row form>
                     <Col md={6}>
                       <InputField label="First Name" name="firstName" type="text" />
@@ -82,7 +82,7 @@ const App: React.FC = () => {
                   <InputField label="Address" name="address" type="text" />
                   <Row form>
                     <Col md={5}>
-                      <InputField label="City" name="city" type="text" />
+                      <InputField className="hpx-50" label="City" name="city" type="text" />
                     </Col>
                     <Col md={4}>
                       <SelectField
@@ -94,7 +94,7 @@ const App: React.FC = () => {
                       />
                     </Col>
                     <Col md={3}>
-                      <InputField label="ZIP Code" name="zip" type="text" />
+                      <InputField className="hpx-50" label="ZIP Code" name="zip" type="text" />
                     </Col>
                   </Row>
                   <SelectField
@@ -107,19 +107,23 @@ const App: React.FC = () => {
                       handleCountryChange(value, setFieldValue);
                     }}
                   />
-                  <h2>Payment</h2>
+                  <h4>Payment</h4>
                   <p><small className="text-secondary">All transactions are secure and encrypted</small></p>
-                  <RadioButtonField label="Credit Card" name="paymentMethod" value="Credit Card" />
-                  <InputField label="Card Number" name="cardNumber" type="text" />
-                  <Row form>
-                    <Col md={6}>
-                      <InputField label="Expiration (MM/YY)" name="expiration" type="text" />
-                    </Col>
-                    <Col md={6}>
-                      <InputField label="Security Code" name="securityCode" type="text" />
-                    </Col>
-                  </Row>
-                  <InputField label="Name on Card" name="nameOnCard" type="text" />
+                  <div className="bg-ligth-blue border hpx-50 d-flex align-items-center ps-2">
+                    <RadioButtonField label="Credit Card" name="paymentMethod" value="Credit Card" />
+                  </div>
+                  <div className="p-2 border bg-very-light-grey">
+                    <InputField label="Card Number" name="cardNumber" type="text" />
+                    <Row form>
+                      <Col md={6}>
+                        <InputField label="Expiration (MM/YY)" name="expiration" type="text" />
+                      </Col>
+                      <Col md={6}>
+                        <InputField label="Security Code" name="securityCode" type="text" />
+                      </Col>
+                    </Row>
+                    <InputField label="Name on Card" name="nameOnCard" type="text" />
+                  </div>
                   <ButtonComponent label="COMPLETE ORDER" />
                 </FormikForm>
               )}

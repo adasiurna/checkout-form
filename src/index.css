@@ -17,7 +17,7 @@ code {
 
 .select-wrap label {
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 10px;
   line-height: 16x;
   color: #828282;
   padding: 0 8px;
@@ -29,10 +29,22 @@ select {
   width: 100%;
 }
 
+.hpx-50 {
+  height: 50px;
+}
+
 @media (min-width: 1400px) {
   .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
       max-width: 1100px;
   }
+}
+
+.bg-ligth-blue {
+  background: #f0f5ff;
+}
+
+.bg-very-light-grey {
+  background: #fafafa;
 }
 
 .bg-light-grey,
@@ -55,4 +67,9 @@ table.bg-light-grey td {
   background-color: #F5F5F5;
   z-index: -1;
   width: calc(100vw - 450px);
+}
+
+.bg-green {
+  background: #009900;
+  border-color: #009900;
 }
