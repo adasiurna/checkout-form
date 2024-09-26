@@ -39,6 +39,29 @@ select {
   }
 }
 
+@media (min-width: 768px) {
+  .right-bg {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .right-bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 100%;
+    background-color: #F5F5F5;
+    z-index: -1;
+    width: calc(100vw - 450px);
+  }
+
+  .border-right-md-up {
+    border-right: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+  }
+}
+
 .bg-ligth-blue {
   background: #f0f5ff;
 }
@@ -51,23 +74,6 @@ select {
 table.bg-light-grey td,
 table.bg-light-grey th {
   background: #F5F5F5;
-}
-
-.right-bg {
-  position: relative;
-  z-index: 1;
-}
-
-.right-bg::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 100%;
-  background-color: #F5F5F5;
-  z-index: -1;
-  width: calc(100vw - 450px);
 }
 
 .bg-green {

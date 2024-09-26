@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col, UncontrolledCollapse, Button } from 'reactstrap';
 import { Formik, Form as FormikForm } from 'formik';
 import * as Yup from 'yup';
 import Header from './components/Header';
@@ -59,9 +59,20 @@ const App: React.FC = () => {
   return (
     <div style={{ minHeight: '100vh', position: 'relative' }}>
       <Header />
+      <div className="d-md-none container pe-0">
+        <div className="d-flex align-items-center justify-content-between bg-light-grey">
+          <Button className="btn btn-light" id="toggler">
+            Order Overview
+          </Button>
+          <div className="pe-1">$229.97</div>
+        </div>
+        <UncontrolledCollapse toggler="#toggler">
+          <OrderSummary productName="Product Name" price="$229.97" />
+        </UncontrolledCollapse>
+      </div>
       <Container className="vh-100">
         <Row className="min-vh-100">
-          <Col md="7" className="border-end border-right pt-4" >
+          <Col md="7" className="border-right-md-up pt-4" >
             <h4>Contact</h4>
             <Formik
               initialValues={initialValues}
@@ -129,9 +140,12 @@ const App: React.FC = () => {
                 </FormikForm>
               )}
             </Formik>
+            <p className="text-center"><small className="text-secondary">&#128274; All transactions are secure and encrypted</small></p>
           </Col>
           <Col md="5" className="pt-4 bg-light-grey right-bg">
-            <OrderSummary productName="Product Name" price="$229.97" />
+            <div className="d-none d-md-block">
+              <OrderSummary productName="Product Name" price="$229.97" />
+            </div>
             <BenefitsTable />
           </Col>
         </Row>
