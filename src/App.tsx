@@ -7,7 +7,8 @@ import InputField from './components/InputField';
 import SelectField from './components/SelectField';
 import RadioButtonField from './components/RadioButtonField';
 import ButtonComponent from './components/ButtonComponent';
-import TableComponent from './components/TableComponent';
+import OrderSummary from './components/OrderSummary';
+import BenefitsTable from './components/BenefitsTable';
 import countryStateData from './data/countriesStates.json';
 
 // Validation schema using Yup
@@ -130,7 +131,8 @@ const App: React.FC = () => {
             </Formik>
           </Col>
           <Col md="5" className="pt-4 bg-light-grey right-bg">
-            <TableComponent productName="Product Name" price="$229.97" />
+            <OrderSummary productName="Product Name" price="$229.97" />
+            <BenefitsTable />
           </Col>
         </Row>
       </Container>

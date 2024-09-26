@@ -48,7 +48,8 @@ select {
 }
 
 .bg-light-grey,
-table.bg-light-grey td {
+table.bg-light-grey td,
+table.bg-light-grey th {
   background: #F5F5F5;
 }
 
