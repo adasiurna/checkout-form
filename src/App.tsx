@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Container, Row, Col, UncontrolledCollapse, Button } from 'reactstrap';
 import { Formik, Form as FormikForm } from 'formik';
 import * as Yup from 'yup';
@@ -98,7 +98,7 @@ const App: React.FC = () => {
                     </Col>
                     <Col md={4}>
                       <SelectField
-                        label="State"
+                        label="State / Province"
                         name="state"
                         options={states}
                         disabled={!states.length}
@@ -121,7 +121,7 @@ const App: React.FC = () => {
                   />
                   <h4>Payment</h4>
                   <p><small className="text-secondary">All transactions are secure and encrypted</small></p>
-                  <div className="bg-ligth-blue border hpx-50 d-flex align-items-center ps-2">
+                  <div className="bg-ligth-blue border-end border-top border-start hpx-50 d-flex align-items-center ps-2">
                     <RadioButtonField label="Credit Card" name="paymentMethod" value="Credit Card" />
                   </div>
                   <div className="p-2 border bg-very-light-grey">
