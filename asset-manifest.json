@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/checkout-form/static/css/main.af400ca6.css",
+    "main.js": "/checkout-form/static/js/main.691993c1.js",
+    "index.html": "/checkout-form/index.html",
+    "main.af400ca6.css.map": "/checkout-form/static/css/main.af400ca6.css.map",
+    "main.691993c1.js.map": "/checkout-form/static/js/main.691993c1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.af400ca6.css",
+    "static/js/main.691993c1.js"
+  ]
+}
